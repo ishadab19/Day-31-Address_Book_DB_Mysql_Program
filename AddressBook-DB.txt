@@ -97,3 +97,17 @@ mysql> select * from addressBook_table;
 | raj       | anand    | mgroad     | delhi   | india       | 8956266 |   749231994 | raj4@gmail.com        |
 +-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
 4 rows in set (0.00 sec)
+
+
+mysql> delete from addressBook_table where FirstName = "jarvis";             //deleting entry from the help of firstname..
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from addressBook_table;
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+| FirstName | LastName | Address    | city    | State       | zip     | PhoneNumber | Email                 |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+| shadab    | hussain  | chapra     | saran   | bihar       |  841301 |   989821949 | me.shadab19@gmail.com |
+| Tony      | Stark    | highstreet | newyork | unitedstate |  118266 |    79231994 | tony9@gmail.com       |
+| raj       | anand    | mgroad     | delhi   | india       | 8956266 |   749231994 | raj4@gmail.com        |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+3 rows in set (0.00 sec)
