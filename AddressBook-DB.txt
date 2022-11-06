@@ -160,5 +160,14 @@ mysql> select count(*) from addressBook_table where city = "saran";
 +----------+
 1 row in set (0.00 sec)
 
-mysql>
+
+mysql> select * from addressBook_table order by FirstName asc;                     //sorting alphabeticaly by FirstName..
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+| FirstName | LastName | Address    | city    | State       | zip     | PhoneNumber | Email                 |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+| raj       | anand    | mgroad     | delhi   | india       | 8956266 |   749231994 | raj4@gmail.com        |
+| shadab    | hussain  | chapra     | saran   | bihar       |  841301 |   989821949 | me.shadab19@gmail.com |
+| Tony      | Stark    | highstreet | newyork | unitedstate |  118266 |    79231994 | tony9@gmail.com       |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+
+3 rows in set (0.04 sec)
 
