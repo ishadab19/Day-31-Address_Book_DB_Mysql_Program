@@ -234,5 +234,50 @@ mysql> select count(*) from addressBook_table;       //getting count
 +----------+
 1 row in set (0.05 sec)
 
+
+mysql> select * from addressBook_table where RelationName = "Friend";
+Empty set (0.00 sec)
+
+mysql> select * from addressBook_table where RelationName = "Tony";
++-----------+----------+---------+-------+-------+--------+-------------+-----------------------+--------------+--------+
+| FirstName | LastName | Address | city  | State | zip    | PhoneNumber | Email                 | RelationName | Type   |
++-----------+----------+---------+-------+-------+--------+-------------+-----------------------+--------------+--------+
+| shadab    | hussain  | chapra  | saran | bihar | 841301 |   989821949 | me.shadab19@gmail.com | Tony         | friend |
++-----------+----------+---------+-------+-------+--------+-------------+-----------------------+--------------+--------+
+1 row in set (0.00 sec)
+
+mysql> select * from addressBook_table where RelationName = "shadab";
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------+--------------+--------------+
+| FirstName | LastName | Address    | city    | State       | zip     | PhoneNumber | Email           | RelationName | Type         |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------+--------------+--------------+
+| Tony      | Stark    | highstreet | newyork | unitedstate |  118266 |    79231994 | tony9@gmail.com | shadab       | familyfriend |
+| raj       | anand    | mgroad     | delhi   | india       | 8956266 |   749231994 | raj4@gmail.com  | shadab       | profession   |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------+--------------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> update addressBook_table set RelationName = 'Brother' where FirstName = 'shadab';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressBook_table set RelationName = 'friend' where FirstName = 'Tony';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update addressBook_table set RelationName = 'ElederBrother' where FirstName = 'raj';
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressBook_table;
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+---------------+--------------+
+| FirstName | LastName | Address    | city    | State       | zip     | PhoneNumber | Email                 | RelationName  | Type         |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+---------------+--------------+
+| shadab    | hussain  | chapra     | saran   | bihar       |  841301 |   989821949 | me.shadab19@gmail.com | Brother       | friend       |
+| Tony      | Stark    | highstreet | newyork | unitedstate |  118266 |    79231994 | tony9@gmail.com       | friend        | familyfriend |
+| raj       | anand    | mgroad     | delhi   | india       | 8956266 |   749231994 | raj4@gmail.com        | ElederBrother | profession   |
++-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+---------------+--------------+
+3 rows in set (0.00 sec)
+
 mysql>
+
+
 
