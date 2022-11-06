@@ -224,6 +224,15 @@ mysql> select * from addressBook_table;
 +-----------+----------+------------+---------+-------------+---------+-------------+-----------------------+--------------+--------------+
 3 rows in set (0.00 sec)
 
-mysql>
 
+
+mysql> select count(*) from addressBook_table;       //getting count
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.05 sec)
+
+mysql>
 
